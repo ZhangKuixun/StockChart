@@ -609,7 +609,7 @@ public abstract class Chart<T extends ChartData<? extends IDataSet<? extends Ent
                 high = null;
             } else {
                 if (this instanceof BarLineChartBase
-                        && ((BarLineChartBase)this).isHighlightFullBarEnabled())
+                        && ((BarLineChartBase) this).isHighlightFullBarEnabled())
                     high = new Highlight(high.getXIndex(), Float.NaN, -1, -1, -1);
 
                 // set the indices to highlight
@@ -681,9 +681,9 @@ public abstract class Chart<T extends ChartData<? extends IDataSet<? extends Ent
             int xIndex = highlight.getXIndex();
             int dataSetIndex = highlight.getDataSetIndex();
 
-            float deltaX = mXAxis != null 
-                ? mXAxis.mAxisRange
-                : ((mData == null ? 0.f : mData.getXValCount()) - 1.f);
+            float deltaX = mXAxis != null
+                    ? mXAxis.mAxisRange
+                    : ((mData == null ? 0.f : mData.getXValCount()) - 1.f);
 
             if (xIndex <= deltaX && xIndex <= deltaX * mAnimator.getPhaseX()) {
 
@@ -1221,8 +1221,7 @@ public abstract class Chart<T extends ChartData<? extends IDataSet<? extends Ent
     }
 
     /**
-     * Set this to false to disable all gestures and touches on the chart,
-     * default: true
+     * 将此设置为 false 以禁用所有在图表上的手势和触摸，默认值为：true
      *
      * @param enabled
      */

@@ -315,7 +315,7 @@ public class MinutesActivity extends BaseActivity {
         d2.setColor(getResources().getColor(R.color.minute_yellow));
         d1.setHighLightColor(Color.WHITE);
         d2.setHighlightEnabled(false);
-        d1.setDrawFilled(true);
+        d1.setDrawFilled(true);//填充背景色
 
 
         barDataSet.setBarSpacePercent(50); //bar空隙
