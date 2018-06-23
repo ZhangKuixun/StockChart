@@ -5,7 +5,6 @@ import android.graphics.Canvas;
 import android.util.AttributeSet;
 
 import com.example.yanjiang.stockchart.bean.DataParse;
-import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.components.YAxis;
 import com.github.mikephil.charting.data.Entry;
@@ -65,10 +64,10 @@ public class MyLineChart extends LineChart {
         return (MyYAxis) super.getAxisRight();
     }
 
-    public void setMarker(MyLeftMarkerView markerLeft, MyRightMarkerView markerRight,MyBottomMarkerView markerBottom, DataParse minuteHelper) {
+    public void setMarker(MyLeftMarkerView markerLeft, MyRightMarkerView markerRight, MyBottomMarkerView markerBottom, DataParse minuteHelper) {
         this.myMarkerViewLeft = markerLeft;
         this.myMarkerViewRight = markerRight;
-        this.mMyBottomMarkerView=markerBottom;
+        this.mMyBottomMarkerView = markerBottom;
         this.minuteHelper = minuteHelper;
     }
 
@@ -129,7 +128,7 @@ public class MyLineChart extends LineChart {
                 mMyBottomMarkerView.layout(0, 0, mMyBottomMarkerView.getMeasuredWidth(),
                         mMyBottomMarkerView.getMeasuredHeight());
 
-                mMyBottomMarkerView.draw(canvas, pos[0]-mMyBottomMarkerView.getWidth()/2, mViewPortHandler.contentBottom());
+                mMyBottomMarkerView.draw(canvas, pos[0] - mMyBottomMarkerView.getWidth() / 2, mViewPortHandler.contentBottom());
                 myMarkerViewLeft.draw(canvas, mViewPortHandler.contentLeft() - myMarkerViewLeft.getWidth(), pos[1] - myMarkerViewLeft.getHeight() / 2);
                 myMarkerViewRight.draw(canvas, mViewPortHandler.contentRight(), pos[1] - myMarkerViewRight.getHeight() / 2);
             }

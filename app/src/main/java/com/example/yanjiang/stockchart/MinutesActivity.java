@@ -89,7 +89,7 @@ public class MinutesActivity extends BaseActivity {
 
                 barChart.highlightValue(new Highlight(h.getXIndex(), 0));
 
-               // lineChart.setHighlightValue(h);
+                // lineChart.setHighlightValue(h);
             }
 
             @Override
@@ -101,8 +101,8 @@ public class MinutesActivity extends BaseActivity {
             @Override
             public void onValueSelected(Entry e, int dataSetIndex, Highlight h) {
                 lineChart.highlightValue(new Highlight(h.getXIndex(), 0));
-               // lineChart.setHighlightValue(new Highlight(h.getXIndex(), 0));//此函数已经返回highlightBValues的变量，并且刷新，故上面方法可以注释
-                 //barChart.setHighlightValue(h);
+                // lineChart.setHighlightValue(new Highlight(h.getXIndex(), 0));//此函数已经返回highlightBValues的变量，并且刷新，故上面方法可以注释
+                //barChart.setHighlightValue(h);
             }
 
             @Override
@@ -177,7 +177,6 @@ public class MinutesActivity extends BaseActivity {
         axisLeftLine.setDrawAxisLine(false);
 
 
-
         //右边y
         axisRightLine = lineChart.getAxisRight();
         axisRightLine.setLabelCount(2, true);
@@ -195,7 +194,7 @@ public class MinutesActivity extends BaseActivity {
         axisRightLine.setDrawAxisLine(false);
         //背景线
         xAxisLine.setGridColor(getResources().getColor(R.color.minute_grayLine));
-        xAxisLine.enableGridDashedLine(10f,5f,0f);
+        xAxisLine.enableGridDashedLine(10f, 5f, 0f);
         xAxisLine.setAxisLineColor(getResources().getColor(R.color.minute_grayLine));
         xAxisLine.setTextColor(getResources().getColor(R.color.minute_zhoutv));
         axisLeftLine.setGridColor(getResources().getColor(R.color.minute_grayLine));
@@ -325,7 +324,7 @@ public class MinutesActivity extends BaseActivity {
         barDataSet.setDrawValues(false);
         barDataSet.setHighlightEnabled(true);
         barDataSet.setColor(Color.RED);
-        List<Integer> list=new ArrayList<>();
+        List<Integer> list = new ArrayList<>();
         list.add(Color.RED);
         list.add(Color.GREEN);
         barDataSet.setColors(list);
@@ -454,7 +453,7 @@ public class MinutesActivity extends BaseActivity {
         MyLeftMarkerView leftMarkerView = new MyLeftMarkerView(MinutesActivity.this, R.layout.mymarkerview);
         MyRightMarkerView rightMarkerView = new MyRightMarkerView(MinutesActivity.this, R.layout.mymarkerview);
         MyBottomMarkerView bottomMarkerView = new MyBottomMarkerView(MinutesActivity.this, R.layout.mymarkerview);
-        lineChart.setMarker(leftMarkerView, rightMarkerView,bottomMarkerView, mData);
-        barChart.setMarker(leftMarkerView, rightMarkerView,bottomMarkerView, mData);
+        lineChart.setMarker(leftMarkerView, rightMarkerView, bottomMarkerView, mData);
+        barChart.setMarker(leftMarkerView, rightMarkerView, bottomMarkerView, mData);
     }
 }
