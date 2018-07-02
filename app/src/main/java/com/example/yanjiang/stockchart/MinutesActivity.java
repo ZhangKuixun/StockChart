@@ -145,8 +145,8 @@ public class MinutesActivity extends BaseActivity {
     private void initChart() {
         lineChart.setScaleEnabled(false);
         lineChart.setDrawBorders(true);
-        lineChart.setBorderWidth(1);
         lineChart.setBorderColor(getResources().getColor(R.color.minute_grayLine));
+        lineChart.setBorderWidth(1);
         lineChart.setDescription("");
         Legend lineChartLegend = lineChart.getLegend();
         lineChartLegend.setEnabled(false);

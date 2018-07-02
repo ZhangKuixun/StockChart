@@ -27,11 +27,9 @@ public class MyXAxisRenderer extends XAxisRenderer {
 
     @Override
     protected void drawLabels(Canvas c, float pos, PointF anchor) {
-        float[] position = new float[]{
-                0f, 0f
-        };
+        float[] position = new float[]{0f, 0f};
         int count = mXAxis.getXLabels().size();
-        for (int i = 0; i < count; i ++) {
+        for (int i = 0; i < count; i++) {
               /*获取label对应key值，也就是x轴坐标0,60,121,182,242*/
             int ix = mXAxis.getXLabels().keyAt(i);
             position[0] = ix;
@@ -49,13 +47,15 @@ public class MyXAxisRenderer extends XAxisRenderer {
                     position[0] = mChart.getViewPortHandler().contentLeft() + labelWidth / 2;
                 }
                 c.drawText(label, position[0],
-                        pos+ Utils.convertPixelsToDp(mChart.getViewPortHandler().offsetBottom()),
+                        pos + Utils.convertPixelsToDp(mChart.getViewPortHandler().offsetBottom()),
                         mAxisLabelPaint);
             }
 
         }
     }
+
     protected Path mRenderGridLinesPath = new Path();
+
     /*x轴垂直线*/
     @Override
     public void renderGridLines(Canvas c) {
@@ -74,7 +74,7 @@ public class MyXAxisRenderer extends XAxisRenderer {
         if (!mChart.isScaleXEnabled()) {
             count -= 1;
         }
-        for (int i = 0; i <= count; i ++) {
+        for (int i = 0; i <= count; i++) {
 
 
             int ix = mXAxis.getXLabels().keyAt(i);
